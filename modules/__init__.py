@@ -11,7 +11,14 @@ from .avanzadas import (
     seno, coseno, tangente
 )
 from .interfaz import Calculadora
-from .interfaz_grafica import CalculadoraGUI
+
+# Importar interfaz gráfica solo si tkinter está disponible
+try:
+    from .interfaz_grafica import CalculadoraGUI
+    _GUI_AVAILABLE = True
+except ImportError:
+    _GUI_AVAILABLE = False
+    CalculadoraGUI = None
 
 __all__ = [
     # Operaciones básicas
@@ -23,5 +30,9 @@ __all__ = [
     'raiz_cuadrada', 'raiz_n', 'logaritmo', 'factorial',
     'seno', 'coseno', 'tangente',
     # Interfaces
-    'Calculadora', 'CalculadoraGUI'
+    'Calculadora'
 ]
+
+# Agregar CalculadoraGUI solo si está disponible
+if _GUI_AVAILABLE:
+    __all__.append('CalculadoraGUI')
