@@ -1,0 +1,18 @@
+# requirements.txt
+# Dependencias para la calculadora profesional
+
+# Bibliotecas estándar de Python utilizadas:
+# - math (funciones matemáticas)
+# - sys (funciones del sistema)
+# - unittest (testing)
+# - tkinter (interfaz gráfica - incluido con Python)
+
+# No se requieren dependencias externas para este proyecto
+# Todas las funciones utilizan la biblioteca estándar de Python
+
+# Para desarrollo y testing avanzado (opcional):
+# pytest>=7.0.0
+# coverage>=6.0.0
+
+# Nota: tkinter viene incluido con la instalación estándar de Python en Windows
+# En sistemas Linux, puede requerir: sudo apt-get install python3-tk
